@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9819E69422E3CB4C004A16F4 /* AddCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819E69322E3CB4C004A16F4 /* AddCharacterViewController.swift */; };
 		9860CEB222E3731300B6F34D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9860CEB122E3731300B6F34D /* AppDelegate.swift */; };
 		9860CEB422E3731300B6F34D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9860CEB322E3731300B6F34D /* ViewController.swift */; };
 		9860CEB722E3731300B6F34D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9860CEB522E3731300B6F34D /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9819E69322E3CB4C004A16F4 /* AddCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCharacterViewController.swift; sourceTree = "<group>"; };
 		9860CEAE22E3731300B6F34D /* Legends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Legends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9860CEB122E3731300B6F34D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9860CEB322E3731300B6F34D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,12 +99,11 @@
 		9860CEB022E3731300B6F34D /* Legends */ = {
 			isa = PBXGroup;
 			children = (
+				98AA8C5B22E4C92E00DF68CE /* View */,
 				9860CEE122E3733C00B6F34D /* Controller */,
 				9860CEDF22E3732100B6F34D /* Model */,
 				9860CEB122E3731300B6F34D /* AppDelegate.swift */,
-				9860CEB522E3731300B6F34D /* Main.storyboard */,
 				9860CEB822E3731500B6F34D /* Assets.xcassets */,
-				9860CEBA22E3731500B6F34D /* LaunchScreen.storyboard */,
 				9860CEBD22E3731500B6F34D /* Info.plist */,
 			);
 			path = Legends;
@@ -142,9 +139,17 @@
 			isa = PBXGroup;
 			children = (
 				9860CEB322E3731300B6F34D /* ViewController.swift */,
-				9819E69322E3CB4C004A16F4 /* AddCharacterViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		98AA8C5B22E4C92E00DF68CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9860CEB522E3731300B6F34D /* Main.storyboard */,
+				9860CEBA22E3731500B6F34D /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9819E69422E3CB4C004A16F4 /* AddCharacterViewController.swift in Sources */,
 				9860CEB422E3731300B6F34D /* ViewController.swift in Sources */,
 				9860CEE322E3736B00B6F34D /* warBand.swift in Sources */,
 				9860CEB222E3731300B6F34D /* AppDelegate.swift in Sources */,

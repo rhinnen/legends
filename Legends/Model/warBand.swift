@@ -11,7 +11,7 @@ import Foundation
 struct Character {
     var name = ""
     var maxActions = 0
-    private var availableActions = 0
+    var availableActions = 0
     var activated = false
     
     init(name: String, actions: Int) {
