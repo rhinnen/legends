@@ -32,13 +32,13 @@ class ViewController: UIViewController {
         update()
     }
     
-    @IBAction func decriment(_ sender: Any) {
-        if let index = currentChar {
+/*    @IBAction func decriment(_ sender: Any) {
+         if let index = currentChar {
             warband.characters[index].availableActions = Int(stepperValue.value)
             update()
         }
     }
-    
+*/
     
     @IBAction func addCharacter(_ sender: Any) {
         let alert = UIAlertController(title: "Character Name?", message: nil, preferredStyle: .alert)
@@ -72,7 +72,6 @@ class ViewController: UIViewController {
     
     func pullCharacter() {
         currentChar = warband.pull()
-        
     }
     
     func update() {

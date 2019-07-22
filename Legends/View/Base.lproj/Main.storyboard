@@ -19,26 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Boc-VF-rnj">
-                                <rect key="frame" x="160" y="732.5" width="94" height="104.5"/>
+                                <rect key="frame" x="178.5" y="761.5" width="57.5" height="75.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-Yz-deU">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3O-e2-qQY">
-                                        <rect key="frame" x="0.0" y="20.5" width="94" height="55"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="57.5" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PD2-QO-Q6I">
-                                        <rect key="frame" x="0.0" y="75.5" width="94" height="29"/>
-                                        <connections>
-                                            <action selector="decriment:" destination="BYZ-38-t0r" eventType="valueChanged" id="yKz-ar-err"/>
-                                        </connections>
-                                    </stepper>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QNp-VT-e21">
@@ -97,8 +91,6 @@
                     <connections>
                         <outlet property="ActionLabel" destination="G3O-e2-qQY" id="gmT-ay-mGt"/>
                         <outlet property="CharacterLabel" destination="1cZ-DL-uIM" id="Niw-BE-dxO"/>
-                        <outlet property="stepperValue" destination="PD2-QO-Q6I" id="AII-cD-LdC"/>
-                        <outletCollection property="Stepper" destination="PD2-QO-Q6I" collectionClass="NSMutableArray" id="wjM-2J-RkV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
