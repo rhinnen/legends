@@ -42,7 +42,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QNp-VT-e21">
-                                <rect key="frame" x="10" y="304" width="394" height="128"/>
+                                <rect key="frame" x="10" y="283.66666666666669" width="394" height="169"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ha-8v-UtS">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="20.333333333333332"/>
@@ -60,6 +60,27 @@
                                             <outletCollection property="gestureRecognizers" destination="Qap-pR-RpD" appends="YES" id="KDX-SU-dcF"/>
                                         </connections>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-01-TMi">
+                                        <rect key="frame" x="0.0" y="128" width="394" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSd-sC-DfC">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Add New"/>
+                                                <connections>
+                                                    <action selector="addCharacter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxT-F3-AaB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNa-J4-uTD">
+                                                <rect key="frame" x="310" y="0.0" width="84" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Remove"/>
+                                                <connections>
+                                                    <action selector="removeCharacter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GA2-QE-Iye"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bQq-Xe-eC2">
@@ -79,41 +100,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MnM-01-TMi">
-                                <rect key="frame" x="10" y="462" width="394" height="41"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSd-sC-DfC">
-                                        <rect key="frame" x="0.0" y="0.0" width="96" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Add New"/>
-                                        <connections>
-                                            <action selector="addCharacter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxT-F3-AaB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNa-J4-uTD">
-                                        <rect key="frame" x="310" y="0.0" width="84" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Remove"/>
-                                        <connections>
-                                            <action selector="removeCharacter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GA2-QE-Iye"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Boc-VF-rnj" secondAttribute="bottom" constant="25" id="BcM-CO-dlm"/>
                             <constraint firstItem="QNp-VT-e21" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D6H-a3-DPo"/>
                             <constraint firstItem="bQq-Xe-eC2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dsg-NR-anN"/>
-                            <constraint firstItem="MnM-01-TMi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Emr-jv-nLd"/>
                             <constraint firstItem="QNp-VT-e21" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IMX-FL-etU"/>
                             <constraint firstItem="QNp-VT-e21" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="IeV-II-6pq"/>
                             <constraint firstItem="bQq-Xe-eC2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="RVW-oM-vQB"/>
                             <constraint firstItem="Boc-VF-rnj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YAE-qy-j6i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QNp-VT-e21" secondAttribute="trailing" constant="10" id="ZKp-uh-wMH"/>
-                            <constraint firstItem="MnM-01-TMi" firstAttribute="top" secondItem="QNp-VT-e21" secondAttribute="bottom" constant="30" id="wFT-cC-Q0G"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MnM-01-TMi" secondAttribute="trailing" constant="10" id="yLM-wg-dFH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
