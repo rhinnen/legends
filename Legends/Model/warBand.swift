@@ -46,9 +46,11 @@ struct Warband {
     var characters = [Character]()
     
     mutating private func reset() {
-        for each in 0 ... self.characters.count-1 {
-            self.characters[each].activated = false
-            self.characters[each].reset()
+        if self.characters.count > 0 {
+            for each in 0 ... self.characters.count-1 {
+                self.characters[each].activated = false
+                self.characters[each].reset()
+            }
         }
     }
     

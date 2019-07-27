@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     var warband = Warband()
     var currentChar:Int? = nil
+    var stepperLink = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,29 @@ class ViewController: UIViewController {
         update()
     }
     
-/*    @IBAction func decriment(_ sender: Any) {
-         if let index = currentChar {
-            warband.characters[index].availableActions = Int(stepperValue.value)
+    @IBAction func stepperAction(_ sender: Any) {
+        if let index = currentChar {
+            if stepperLink > Int(stepperValue.value) {
+                warband.characters[index].decrementAction()
+            } else {
+                warband.characters[index].incrementAction()
+            }
+            stepperLink = Int(stepperValue.value)
             update()
         }
     }
-*/
+
+    @IBAction func removeCharacter(_ sender: Any) {
+        if let index = currentChar {
+            warband.kill(index: index)
+        }
+        if warband.characters.count == 0 {
+            currentChar = .none
+        } else {
+            currentChar = warband.pull()
+        }
+        update()
+    }
     
     @IBAction func addCharacter(_ sender: Any) {
         let alert = UIAlertController(title: "Character Name?", message: nil, preferredStyle: .alert)
@@ -48,14 +65,20 @@ class ViewController: UIViewController {
             textField.placeholder = "Add a new combatant's name."
         })
         
+        alert.addTextField(configurationHandler: { textField in
+            textField.placeholder = "Max number of actions"
+        })
+        
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler:
         { action in
             if let name = alert.textFields?.first?.text {
-                if !self.warband.add(name: name, maxActions: 6) {
-                    self.duplicateCharacter(self, name: name)
-                } else {
-                    self.pullCharacter()
-                    self.update()
+                if let maxActions = Int(alert.textFields?.last?.text ?? "6") {
+                    if !self.warband.add(name: name, maxActions: maxActions) {
+                        self.duplicateCharacter(self, name: name)
+                    } else {
+                        self.pullCharacter()
+                        self.update()
+                    }
                 }
             }
         }))
@@ -72,6 +95,10 @@ class ViewController: UIViewController {
     
     func pullCharacter() {
         currentChar = warband.pull()
+        if let current = currentChar {
+            stepperLink = warband.characters[current].availableActions
+            stepperValue.value = Double(stepperLink)
+        }
     }
     
     func update() {
